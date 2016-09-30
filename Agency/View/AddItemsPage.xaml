@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="Agency.AddItemsPage"
+			 Title="{Binding Title}">
+	<ContentPage.Content>
+		<TableView Intent="Form">
+			<TableRoot>
+				<TableSection Title="{Binding TitleSection}">
+					<EntryCell Label="Last name" Text="{Binding LastName}"/>
+					<EntryCell Label="First name" Text="{Binding FirstName}"/>
+					<ViewCell>
+						<StackLayout Padding="15,15,0,15" Orientation="Horizontal">
+							<Label Text="Birth date" HorizontalOptions="Fill" WidthRequest="90"/>
+							<DatePicker Date="{Binding Date}" HorizontalOptions="Fill"/>
+						</StackLayout>
+					</ViewCell>
+					<EntryCell Label="Region" Text="{Binding Region}"/>
+					<EntryCell Label="City" Text="{Binding City}"/>
+					<EntryCell Label="Postal code" Text="{Binding PostalCode}"/>
+				</TableSection>
+				<TableSection Title="">
+					<TextCell Text="{Binding ActionCommandText}" StyleId="None" TextColor="#007AFF" Command="{Binding Save}"/>
+				</TableSection>
+			</TableRoot>
+		</TableView>
+	</ContentPage.Content>
+</ContentPage>

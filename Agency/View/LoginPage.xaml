@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 xmlns:local="clr-namespace:Agency"
+			 x:Class="Agency.LoginPage"
+			 Title="Authentication"
+		     BackgroundImage="main_background.png">
+	<ScrollView>
+		<StackLayout VerticalOptions="Center" Padding="20,0,20,50">
+			<Image Source="exetera.png" WidthRequest="110"/>
+			<StackLayout Orientation="Horizontal" Padding="0" Spacing="10" HorizontalOptions="FillAndExpand">
+				<Entry Placeholder="Email" Text="{Binding Email, Mode=TwoWay}" HorizontalOptions="FillAndExpand" />
+				<Image Source="username.png" WidthRequest="25" HorizontalOptions="Center" VerticalOptions="Center"/>	
+			</StackLayout>
+			<StackLayout Orientation="Horizontal" Padding="0" Spacing="10" HorizontalOptions="FillAndExpand">
+				<Entry Placeholder="Password" Text="{Binding Password, Mode=TwoWay}" IsPassword="true" HorizontalOptions="FillAndExpand"/>
+				<Image Source="lock.png" WidthRequest="25" HorizontalOptions="Center" VerticalOptions="Center"/>
+			</StackLayout>
+			<StackLayout Padding="0,30,0,0">
+				<Button Text="Login" TextColor="White" BackgroundColor="#F68484" Command="{Binding AuthenticationCommand}" HeightRequest="35"/>
+			</StackLayout>
+		</StackLayout>
+	</ScrollView>
+</ContentPage>
+
+
+<!--<RelativeLayout>
+      		<StackLayout x:Name="Logo" Padding="50,50,20,0" Spacing="15" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+          		<Image Source="exetera.png" Aspect="AspectFill" WidthRequest="110"/>
+      		</StackLayout>
+			<StackLayout RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Constant=8}" VerticalOptions="CenterAndExpand">
+				<RelativeLayout>
+			    	<StackLayout RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=16}"
+			  					 RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=8}"
+			      			     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Constant=-24}"
+			      				 RelativeLayout.HeightConstraint="{ConstraintExpression Type=Constant, Constant=48}"
+			      	       		 Orientation="Horizontal">
+						<Entry Placeholder="Email" Text="{Binding Email, Mode=TwoWay}" HorizontalOptions="FillAndExpand"/>
+			      		<Image Source="Email.png" WidthRequest="20" HorizontalOptions="Center" VerticalOptions="Center"/>
+			    	</StackLayout>
+				</RelativeLayout>
+				<RelativeLayout>
+			    	<StackLayout RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=16}"
+			  					 RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=-8}"
+			      			     RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Constant=-24}"
+			      				 RelativeLayout.HeightConstraint="{ConstraintExpression Type=Constant, Constant=48}"
+			      	       		 Orientation="Horizontal">
+						<Entry Placeholder="Password" Text="{Binding Password, Mode=TwoWay}" IsPassword="true" HorizontalOptions="FillAndExpand"/>
+			      		<Image Source="Key.png" WidthRequest="20" HorizontalOptions="Center" VerticalOptions="Center"/>
+			    	</StackLayout>
+				</RelativeLayout>
+				<Button Text="Login" TextColor="White" BackgroundColor="#F68484" Command="{Binding AuthenticationCommand}" HeightRequest="35"/>
+			</StackLayout>
+		</RelativeLayout>-->

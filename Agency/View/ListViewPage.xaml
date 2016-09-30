@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:local="clr-namespace:Agency"
+			 x:Class="Agency.ListViewPage"
+			 Title="Employees">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Icon="add" Command="{Binding AddEmployee}" />
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<StackLayout>
+			<ListView x:Name="listView" 
+			  		ItemsSource="{Binding EmployeesList}"
+			  		IsPullToRefreshEnabled="true"
+			  		IsRefreshing="{Binding IsRefreshing, Mode=OneWay}"
+			  		RefreshCommand="{Binding RefreshCommand}"
+					SeparatorColor="#F68484">
+			</ListView>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
+
+<!--ItemTemplate="{Binding Template}"-->

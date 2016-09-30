@@ -1,0 +1,13 @@
+﻿<Properties StartupConfiguration="{F678477B-A747-4BDC-A7A3-49CF7E63EFF3}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AgencyAUTH/Controllers/AccountController.cs">
+    <Files>
+      <File FileName="AgencyAUTH/Controllers/AccountController.cs" Line="24" Column="34" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Agency PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
